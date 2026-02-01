@@ -1,3 +1,4 @@
+#include <stdio.h>
 int main() {
 // Write C code here
 float n;
