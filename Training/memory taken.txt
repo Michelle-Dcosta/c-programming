@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+int a=10;                     //4bytes
+int size_of_int=sizeof(a);   //4bytes
+printf("size_of_int: %d",size_of_int);
+float f=15.5;                //4bytes
+int size_of_float=sizeof(f); //4bytes
+printf("\nsize_of_float: %d",size_of_float);
+char ch='A';                 //1bytes
+int size_of_char=sizeof(ch);//4bytes
+printf("\nsize_of_char: %d",size_of_char);
+return 0;
+}//total 21 bytes
+size_of_int: 4
+size_of_float: 4
+size_of_char: 1

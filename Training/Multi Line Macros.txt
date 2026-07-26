@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define Print_info()\
+printf("Hello"); \
+printf(" Guys!!");
+int main(){
+    Print_info(); 
+    return 0;
+}
+Hello Guys!!

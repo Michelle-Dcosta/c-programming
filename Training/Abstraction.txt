@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;     
+class Measure{
+    public:
+    virtual void area()=0;
+};
+class circle: public Measure{ //derived class
+    public:
+    void area(){
+        float r=10;
+        cout<<"area is: "<<3.14*r*r<<endl;
+    }
+};
+class rectangle: public Measure{//derived class
+    public:
+    void area(){
+        cout<<"area is: "<<10*20<<endl;
+    }
+};
+int main(){
+    circle c;
+    rectangle r;
+    c.area();
+    r.area();
+}
+area is: 314
+area is: 200
+//Derived class must and should contain the same function as Abstract class 
+//the function name should be same as that of the one in abstract class

@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define l 90
+#define b 89
+#define area l*b
+int main(){
+    printf("%d",area); 
+    return 0;
+}
+8010
+
+
+create a macros function to calculate perimeter of a circle
+#include<stdio.h>
+#include<stdlib.h>
+#define PI 3.14
+#define perimeter(r) 2*PI*r
+int main(){
+    int r;
+    printf("The radius is: ");
+    scanf("%d",&r);
+    printf("The perimeter is :%f",perimeter(r)); 
+    return 0;
+}
+The radius is: 5
+The perimeter is :31.400000

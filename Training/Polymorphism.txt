@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+class Measure{                       //Method overloading/Function overloading
+    public:
+    void area(int a,int b){
+        cout<<"The Area is: "<<a*b<<endl;
+    }
+    void area(int a,int b,int c){
+        cout<<"The Area is: "<<a*b*c<<endl;
+    }
+    void area(float a,float b){
+        cout<<"The Area is: "<<a*b<<endl;
+    }
+};
+int main(){
+    Measure m;                       //compiler decides which function to call based on parameters and data type
+    m.area(5,8);
+    m.area(5,8,4);
+    m.area(5.1f,8.1f);
+}
+The Area is: 40
+The Area is: 160
+The Area is: 41.31
+
+
+#include<iostream>
+using namespace std;                   //Method Overriding
+class Measure{
+    public:
+    void display(){
+        cout<<"Original"<<endl;
+    }
+};
+class New: public Measure{
+    public:
+    void display(){
+        cout<<"Overide"<<endl;
+    }
+};
+int main(){
+    Measure m;
+    m.display();
+    New n;
+    n.display();
+}
+Original
+Overide

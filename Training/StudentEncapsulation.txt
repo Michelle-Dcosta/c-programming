@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+class student{
+    private: int marks;
+    public:
+    string name;
+    int usn;
+    student (string a,int b){
+        name=a;
+        usn=b;
+    }
+    void setm(int a){
+        if (a>100)
+        cout<<"Invalid"<<endl;
+        else marks=a;
+    }
+    int getm(){
+        return marks;
+    }
+};
+int main(){
+    student s1("Ravi",001);
+    s1.setm(90);
+    student s2("Sneha",002);
+    s2.setm(65);
+    cout<<s1.name<<" with usn "<<s1.usn<<" has marks "<<s1.getm()<<endl;
+    cout<<s2.name<<" with usn "<<s2.usn<<" has marks "<<s2.getm()<<endl;
+}
+Ravi with usn 1 has marks 90
+Sneha with usn 2 has marks 65
+
+#include<iostream>
+using namespace std;
+class student{
+    private: int marks;
+    public:
+    string name;
+    int usn;
+    student (string a,int b){
+        name=a;
+        usn=b;
+    }
+    void setm(int a){
+        if (a>100)
+        cout<<"Invalid"<<endl;
+        else marks=a;
+    }
+    int getm(){
+        return marks;
+    }
+};
+int main(){
+    student s1("Ravi",001);
+    s1.setm(80);
+    student s2("Sneha",002);
+    s2.setm(65);
+    s1.setm(90);
+    cout<<s1.name<<" with usn "<<s1.usn<<" has marks "<<s1.getm()<<endl;
+    cout<<s2.name<<" with usn "<<s2.usn<<" has marks "<<s2.getm()<<endl;
+}
+Ravi with usn 1 has marks 90                                                                                                
+Sneha with usn 2 has marks 65

@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct student{
+    int age;
+};
+void by_value(struct student s){
+    printf("%d\n",s.age);
+    s.age=50;
+    printf("%d\n",s.age);
+}
+int main(){
+    struct student s={40};
+    printf("Before call by value :%d\n",s.age);
+    by_value(s);
+    printf("After call by value :%d\n",s.age);
+    return 0;
+}
+Before call by value :40
+40
+50
+After call by value :40
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct student{
+    int age;
+};
+void by_value(struct student s){
+    printf("%d\n",s.age);
+    s.age=50;
+    printf("%d\n",s.age);
+}
+void by_ref(struct student *p){
+    printf("%d\n",p->age);
+    p->age=50;
+    printf("%d\n",p->age);
+}
+int main(){
+    struct student s={40};
+    printf("Before call by value :%d\n",s.age);
+    by_value(s);
+    printf("After call by value :%d\n",s.age);
+    struct student *p= &s;
+    printf("Before call by ref :%d\n",p->age);
+    by_ref(p);
+    printf("After call by ref :%d\n",p->age);
+    return 0;
+}
+Before call by value :40
+40
+50
+After call by value :40
+Before call by ref :40
+40
+50
+After call by ref :50

@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define maximum(a,b)\
+if (a>b){printf(" %d is maximum",a);} \
+else {printf(" %d is maximum",b);}
+int main(){
+    int a,b;
+    printf("enter value of a & b:");
+    scanf("%d %d",&a,&b);
+    maximum(a,b);
+    return 0;
+}
+enter value of a & b:9 4
+ 9 is maximum

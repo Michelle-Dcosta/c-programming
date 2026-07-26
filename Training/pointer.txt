@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int x=10;
+    int *ptr;
+    ptr=&x;
+    printf("Address of x: %p",ptr);
+    printf("\nvalue of x by pointer reference: %d", *ptr);
+    x=15;
+    *ptr=25;
+    printf("\nvalue of x by pointer reference: %d", x);
+    return 0;
+}
+Address of x: 0061FF18
+value of x by pointer reference: 10
+value of x by pointer reference: 25
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int arr[]={10,20,30,40,50};   //Accessing array using ptr
+    printf(" %d", *arr);      //10
+    printf("\n %d", *(arr+1));//20           //Pointer Arithmatic
+    printf("\n %d", *(arr+2));//30
+    printf("\n %d", *arr+3);  //13
+    return 0;
+}
+ 10
+ 20
+ 30
+ 13
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int y=10;
+    int *a;
+    a=&y;
+    int **b;          // ** ---pointer of pointer   2 level pointer
+    b=&a;
+    printf("%d",**b);
+    return 0;
+}
+10

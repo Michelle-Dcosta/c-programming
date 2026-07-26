@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main(){
+    int arr[]={15,4,2,1,8,11,7};
+    int a,b=0;
+    int len=sizeof(arr)/sizeof(arr[0]);
+    int arr2[len-1];
+    for (int i=0;i<len;i++){
+        a=arr[i];
+        for (int j=1;j<len;i++){
+            arr2[j]=arr[j]-arr[i];
+            };
+        printf("%d",arr2);
+        };
+    return 0;
+}
+Max profit: 10
+
+#include<stdio.h>
+int main(){
+    int arr[]={7,4,9,1,3,2};
+    int len=sizeof(arr)/sizeof(arr[0]);
+    int minvalue=arr[0];
+    int profit,maxprofit=0;
+    for (int i=0;i<len;i++){
+        if (arr[i] < minvalue){
+            minvalue = arr[i];
+        }
+        profit = arr[i]-minvalue;
+        if(profit>maxprofit){
+            maxprofit=profit;
+        }}
+        printf("Max profit: %d",maxprofit);
+    return 0;
+}
+Max profit: 5

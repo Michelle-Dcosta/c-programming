@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class rectangle{
+    public:
+    int  length;
+    int breadth;
+    rectangle(int l,int b){            //constructor
+        length=l;
+        breadth=b;
+    }
+    int peri(){
+        int p=2*(length+breadth);
+        return p;
+    }
+    int area(){
+        int a=length*breadth;
+        return a;
+    }
+    ~rectangle(){
+       cout<<"Destructor called"<<endl;  //Destructor
+    }
+};
+int main(){
+    rectangle r1(12,13);
+    cout<<"the perimeter is: "<<r1.peri()<<endl;
+    cout<<"the area is: "<<r1.area()<<endl;
+    rectangle r2(12,11);
+    cout<<"the perimeter is: "<<r2.peri()<<endl;
+    cout<<"the area is: "<<r2.area()<<endl;
+    cout<<"Main Ended"<<endl; 
+}
+the perimeter is: 50
+the area is: 156
+the perimeter is: 46
+the area is: 132
+Main Ended
+Destructor called
+Destructor called

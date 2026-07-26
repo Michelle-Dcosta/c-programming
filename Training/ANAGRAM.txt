@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char w1[]="SAAB"; //silent   listen
+    char w2[]="BAAS";
+    int len1=strlen(w1);
+    int len2=strlen(w2);
+    int asciiarr[256]={0};
+    if (len1!=len2){
+        printf("Not Anagram");
+        return 0;
+    }
+    int w1n,w2n;
+    for (int i=0; i < len1;i++){       //hash table
+       w1n= w1[i];
+       asciiarr[w1n]++;       //hash table
+       w2n = w2[i];
+       asciiarr[w2n]--;
+    }
+    for(int j=0; j<256; j++){
+        if (asciiarr[j]!=0){
+        printf("Not Anagram");
+        return 0;
+        }
+    }
+        printf("Anagram");
+    return 0;
+}
+Anagram
+
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char w1[]="SAAB"; //silent   listen
+    char w2[]="BASS";
+    int len1=strlen(w1);
+    int len2=strlen(w2);
+    int asciiarr[256]={0};
+    if (len1!=len2){
+        printf("Not Anagram");
+        return 0;
+    }
+    int w1n,w2n;
+    for (int i=0; i < len1;i++){       //hash table
+       w1n= w1[i];
+       asciiarr[w1n]++;       //hash table
+       w2n = w2[i];
+       asciiarr[w2n]--;
+    }
+    for(int j=0; j<256; j++){
+        if (asciiarr[j]!=0){
+        printf("Not Anagram");
+        return 0;
+        }
+    }
+        printf("Anagram");
+    return 0;
+}
+Not Anagram
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char w1[]="SAAB"; //M-2 A-2 D-1 A-2 M-2
+    char w2[]="BAAS";
+    int len1=strlen(w1);
+    int len2=strlen(w2);
+    int asciiarr1[256]={0};
+    int asciiarr2[256]={0};
+    int nch;
+    if (len1==len2){
+    for (int i=0; i < len1;i++){       //hash table
+       nch= w1[i];
+       asciiarr1[nch]++;       //hash table
+       nch= w2[i];
+       asciiarr2[nch]++;
+    }
+    for(int j=0; j<256; j++){
+        if (asciiarr1[j]==asciiarr2[j]){
+            printf("anagram");
+        }
+    else{
+       printf(" not anagram");
+    }
+}}
+    else{
+       printf("not anagram");
+    }
+    return 0;
+}
+anagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagramanagram

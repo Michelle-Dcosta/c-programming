@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class Employee{
+    private:
+    float salary;
+    public:
+    string name;
+    int ID;
+    Employee(string a,int id){
+        name=a;
+        ID=id;
+    }
+    void setsal(float a){
+        if (a<0)
+        cout<<"Invalid"<<endl;
+        else 
+        salary=a;
+    }
+    float getsal(){
+        return salary;
+    }
+};
+int main(){
+    Employee b1("Ram",1);
+    b1.setsal(90000);
+    cout<<"Name is: "<<b1.name<<endl;
+    cout<<"ID is: "<<b1.ID<<endl;
+    cout<<"Salary is: "<<b1.getsal()<<endl;
+}
+Name is: Ram
+ID is: 1
+Salary is: 90000

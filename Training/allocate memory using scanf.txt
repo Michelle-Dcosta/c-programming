@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int *P;
+    P=(int *)malloc(5*sizeof(int));
+    for(int i=0;i<5;i++){
+        scanf("%d",&P[i]);
+    }
+    printf("the valus are:");
+    for(int j=0; j<5; j++){
+        printf("%d \n",P[j]);
+    }
+     return 0;
+}
+56
+67
+86
+89
+90
+the valus are:
+56 
+67 
+86 
+89 
+90 

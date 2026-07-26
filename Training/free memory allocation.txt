@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int *P;
+    P=(int *)malloc(3*sizeof(int));
+    P[0]=67;
+    P[1]=90;
+    P[2]=89;
+    P=realloc(P, 5*sizeof(int));
+    for(int i=0;i<5;i++){
+        printf("%d \n",P[i]);
+    }
+    free(P);            //pointing to useless memory     - Dangling pointer
+    P=NULL;       //Dangling Pointer to null
+    return 0;
+}

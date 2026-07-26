@@ -1,0 +1,99 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct Book{
+    char title[100];
+    char author[100];
+    float price;
+};
+int main(){
+    printf("enter the number of entries:");
+    int n;
+    scanf("%d",&n);
+    int i;
+    struct Book b[n];
+    for(i=0;i<n;i++){
+        printf("Title:");
+        scanf("%s",b[i].title);
+        printf("Author Name:");
+        scanf("%s",b[i].author);
+        printf("Price:");
+        scanf("%d",&b[i].price);
+    }
+    for(i=0;i<n;i++){
+        printf("Title: %s\n",b[i].title);
+        printf("Author Name: %s\n",b[i].author);
+        printf("Price: %d\n",b[i].price);
+    }
+    return 0;
+}
+enter the number of entries:2
+Title:Beauty
+Author Name:Neil
+Price:688
+Title:Beast
+Author Name:Neil
+Price:689
+Title:Beauty
+Author Name:Neil
+Price:688
+Title:Beast
+Author Name:Neil
+Price:689
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct Book{
+    char title[100];
+    char author[100];
+    float price;
+};
+int main(){
+    printf("enter the number of entries:");
+    int n;
+    scanf("%d",&n);
+    int i;
+    struct Book b[n];
+    for(i=0;i<n;i++){
+        printf("Title:");
+        scanf("%s",&b[i].title);
+        printf("Author Name:");
+        scanf("%s",&b[i].author);
+        printf("Price:");
+        scanf("%f",&b[i].price);
+    }
+    for(i=0;i<n;i++){
+        if(b[i].price>500){
+         printf("Title: %s\n",b[i].title);
+         printf("Author Name: %s\n",b[i].author);
+         printf("Price: %f\n",b[i].price);}
+    }
+    return 0;
+}
+enter the number of entries:5
+Title:Volary
+Author Name:Geena
+Price:4765
+Title:Uthopia
+Author Name:teena 
+Price:6859
+Title:Beauty
+Author Name:Neil
+Price:450
+Title:Beast
+Author Name:Neil
+Price:240
+Title:House
+Author Name:John
+Price:788
+Title:Volary
+Author Name:Geena
+Price:4765
+Title:Uthopia
+Author Name:teena 
+Price:6859
+Title:House
+Author Name:John
+Price:788

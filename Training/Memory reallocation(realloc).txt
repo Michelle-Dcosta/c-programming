@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int *P;
+    P=(int *)malloc(3*sizeof(int));     
+    P[0]=67;
+    P[1]=90;
+    P[2]=89;
+    P=realloc(P, 5*sizeof(int));     //reallocation
+    for(int i=0;i<5;i++){
+        printf("%d \n",P[i]);
+    }
+    return 0;
+}
+67 
+90 
+89 
+32891 
+83886085 

@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class Student{
+    public:
+    string name;
+    int age;
+    Student (string n, int a){
+        name=n;
+        age=a;
+    }
+    void display(){
+        cout<<"The name is: "<<name<<endl;
+        cout<<"The age is: "<<age<<endl;
+    }
+};
+int main(){
+    Student s1("Michelle",21);
+    s1.display();
+}
+The name is: Michelle
+The age is: 21
+//constructor has same name as class , it does not need to be called separately like function+

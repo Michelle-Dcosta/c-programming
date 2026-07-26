@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+int arr[]={900,940,950,1100,1500,1800};          //Array Traversal
+int dep[]={910,1200,1120,1130,1600,2000};
+int n=6;
+int i=0,j=0;
+int no_of_platforms=0,maxplatform=0;
+while(i<n && j<n){
+    if(arr[i] < dep[j]){
+        no_of_platforms++;
+        if(no_of_platforms > maxplatform){
+            maxplatform = no_of_platforms;
+        }
+        
+        i++;
+    }
+    else{
+        no_of_platforms--;
+        j++;
+    }
+}
+printf("max platforms:%d",maxplatform);
+   return 0;
+}
+max platforms:3

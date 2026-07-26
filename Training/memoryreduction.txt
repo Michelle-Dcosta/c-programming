@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main() {
+int a=10;                     //4bytes
+int size_of_int=sizeof(a);   //4bytes
+printf("size_of_int: %d",size_of_int);
+float f=15.5;                //4bytes
+int size_of_float=sizeof(f); //4bytes
+printf("\nsize_of_float: %d",size_of_float);
+char ch='A';                 //1bytes
+int size_of_char=sizeof(ch);//4bytes
+printf("\nsize_of_char: %d",size_of_char);
+short int s=10;                         //2bytes
+short int size_of_shortint=sizeof(s);   //2bytes
+printf("\nsize_of_shortint: %d",size_of_shortint);
+return 0;
+}  
+size_of_int: 4
+size_of_float: 4
+size_of_char: 1
+size_of_shortint: 2
+if you use short int you will only use 15 bytes instead of 21 bytes
+
+#include <stdio.h>
+int main() {
+long int l=10;                         //2bytes
+short int size_of_longint=sizeof(l);   //2bytes
+printf("\nsize_of_longint: %d",size_of_longint);
+return 0;
+}
+size_of_longint: 8

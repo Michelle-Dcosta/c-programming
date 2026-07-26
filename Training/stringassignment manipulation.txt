@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char word1[100];
+    char word2[]="abc";
+    word1=word2;
+    printf("w1:%s",word1);
+    return 0;
+}
+ERROR
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char word1[100];
+    char word2[]="abc";
+    strcpy(word1,word2);
+    printf("w1:%s",word1);
+    return 0;
+}
+w1:abc

@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define square(x) x*x
+int main(){
+    printf("%d",square(9));
+    return 0;
+}
+81
+
+#include<stdio.h>
+#include<stdlib.h>
+#define square(x) x*x
+int main(){
+    printf("%d",square(2+3)); // 2+3*2+3 =>2+6+3 =11
+    return 0;
+}
+11
+
+#include<stdio.h>
+#include<stdlib.h>
+#define square(x) (x)*(x)
+int main(){
+    printf("%d",square(2+3)); // (2+3)*(2+3) =>5*5 =25
+    return 0;
+}
+25

@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() {
+const float pie=3.14;
+pie=3.14123456;
+printf("%f",pie);
+return 0;
+}
+ERROR!
+/tmp/CfJonbvpPy/main.c: In function 'main':
+/tmp/CfJonbvpPy/main.c:4:4: error: assignment of read-only variable 'pie'
+    4 | pie=3.14123456;
+      |    ^
+
+#include <stdio.h>
+int main() {
+const float pie;   //without assigning variable
+pie=3.14123456;
+printf("%f",pie);
+return 0;
+}
+ERROR!
+/tmp/8CFC09SdVp/main.c: In function 'main':
+/tmp/8CFC09SdVp/main.c:4:4: error: assignment of read-only variable 'pie'
+    4 | pie=3.14123456;
+      |    ^
+

@@ -1,0 +1,26 @@
+#include<stdio.h>
+enum months{
+    Jannuary=1,February,March,April,May,June,July,August,September,October,November,December
+};
+int main(){
+    enum months mth;
+    mth=June;
+    char *season;
+    switch(mth){
+    case Jannuary:case February:case December:
+    season="winter";
+    break;
+    case March:case April:case May:
+    season="Summer";
+    break;
+    case June:case July:case August:
+    season="Monsoon";
+    break;
+    case September:case October:case November:
+    season="Spring";
+    break;
+  }
+    printf("%d month is %s",mth,season);
+    return 0;
+}
+6 month is Monsoon

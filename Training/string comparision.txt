@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char word1[]="abc";
+    char word2[]="abc";
+    if(word1==word2){                      //array comparision cannot be done hence it shows not equal
+        printf("equal");
+    }
+    else{
+        printf("not equal");
+    }
+    return 0;
+}
+not equal
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char word1[]="abc";
+    char word2[]="abc";
+    int result=strcmp(word1,word2);      //if o/p of strcmp fn is 0 then the values are equal else not equal
+    printf("%d",result);
+    return 0;
+}
+0

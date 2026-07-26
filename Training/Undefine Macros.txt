@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define Print_info()\
+printf("Hello"); \
+printf(" Guys!!");
+#undef Print_info           //undefine
+int main(){
+    Print_info(); 
+    return 0;
+}
+app.c: In function 'main':
+app.c:8:5: warning: implicit declaration of function 'Print_info' [-Wimplicit-function-declaration]
+     Print_info();
+     ^~~~~~~~~~
+C:\Users\Student\AppData\Local\Temp\cc4Cnxi0.o:app.c:(.text+0xc): undefined reference to `Print_info'
+collect2.exe: error: ld returned 1 exit status

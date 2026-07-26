@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class Bank{
+    private:
+    float bal;
+    public:
+    void setbal(float b){
+        if (b<0)
+        cout<<"Invalid"<<endl;
+        else
+        bal=b;
+    }
+    float getbal(){
+        return bal;
+    }
+};
+int main(){
+    Bank b1;
+    b1.setbal(90000);
+    cout<<"Balance is: "<<b1.getbal()<<endl;
+}
+Balance is: 90000

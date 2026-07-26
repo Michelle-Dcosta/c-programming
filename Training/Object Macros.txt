@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define PI 3.14                      //it is assigned during pre processing
+int main(){
+    int r=5;
+    printf("%f",PI*r*r);
+    return 0;
+}
+78.500000
+
+#include<stdio.h>
+#include<stdlib.h>
+#define PI 3.14
+int main(){
+    int r=5;
+    printf("%f",PI*r*r);
+    PI=78;
+    return 0;
+}
+app.c: In function 'main':
+app.c:7:7: error: lvalue required as left operand of assignment
+     PI=78;
+       ^
+
+#include<stdio.h>
+#include<stdlib.h>
+#define PI 3.14
+#define r 5
+int main(){
+    printf("%f",PI*r*r);
+    return 0;
+}
+78.500000

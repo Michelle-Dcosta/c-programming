@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char word[]="MADAM"; //M-2 A-2 D-1 A-2 M-2
+    int n=strlen(word);
+    char ch;
+    int c=0;
+    for(int i=0;i<n;i++){
+        ch=word[i];
+        for(int j=0;j<n;j++){
+            if (ch==word[j]){
+            c++;
+            }
+        }
+        printf("\n%c : %d",ch,c);
+        c=0;
+    }
+    return 0;
+} 
+M : 2
+A : 2
+D : 1
+A : 2
+M : 2
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char word[]="MADAM"; //M-2 A-2 D-1 A-2 M-2
+    int len=strlen(word);
+    int asciiarr[256]={0};
+    int nch;
+    for (int i=0; i < len;i++){       //hash table
+       nch= word[i];
+       asciiarr[nch]++;
+    }
+    for(int j=0; j<256; j++){
+        if (asciiarr[j]>0){
+            printf("%c : %d",j,asciiarr[j]);
+        }
+    }
+    return 0;
+}
+A : 2  D : 1  M : 2

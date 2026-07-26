@@ -1,0 +1,65 @@
+#include<stdio.h>
+int main(){
+    FILE *fp;
+    fp=fopen("sample.txt");
+    return 0;
+}
+app.c: In function 'main':
+app.c:4:8: error: too few arguments to function 'fopen'
+     fp=fopen("sample.txt");
+        ^~~~~
+In file included from app.c:1:0:
+c:\mingw\include\stdio.h:260:41: note: declared here
+ _CRTIMP __cdecl __MINGW_NOTHROW  FILE * fopen (const char *, const char *);
+                                         ^~~~~
+
+#include<stdio.h>
+int main(){
+    FILE *fp;
+    fp=fopen("sample.txt","r");//fopen("filepath","mode")
+    return 0;
+}
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+    FILE *fp;
+    char content[100];
+    fp=fopen("sample.txt","w");//fopen("filepath","mode")
+    fscanf(fp,"%s",content);
+    printf("%s",content);
+    fclose(fp);
+    return 0;
+}
+Hello_Students
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+    FILE *fp;
+    char content[100];
+    fp=fopen("sample.txt","w");//fopen("filepath","mode")
+    fprintf(fp,"CProgramming");
+    fclose(fp);
+    return 0;
+}
+in sample.txt  all the contents are erased and replaced with 
+CProgramming
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+    FILE *fp;
+    char content[100];
+    fp=fopen("C:\\Users\\Student\\Desktop\\Manoj Reddy\\Manoj.txt","w");//fopen("filepath","mode")
+    fscanf(fp,"%s",content);
+    printf("%s",content);
+    fclose(fp);
+    return 0;
+}
+
+when you are using a different folder location make sure there are \\ in the path instead of \ if a single\ is present it considers it as a escape path

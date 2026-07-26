@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct account_details{
+    char account_number[10];
+    float balance;
+    int pin;
+};
+int main(){
+    int n,i;
+    printf("Number of Accounts ");
+    scanf("%d",&n);
+    struct account_details c[n];
+    FILE *fp;
+    fp=fopen("Bank Details.txt","w");
+    for(i=0;i<n;i++){
+    printf("Account Number:");
+    scanf("%s",&c[i].account_number);
+    printf("Balance:");
+    scanf("%f",&c[i].balance);
+    printf("Enter the pin:");
+    scanf("%d",&c[i].pin);
+    fprintf(fp,"%s","Account Number:");
+    fprintf(fp,"%s\n",c[i].account_number);
+    fprintf(fp,"%s","Balance::");
+    fprintf(fp,"%f\n", c[i].balance);
+    fprintf(fp,"%s","pin:");
+    fprintf(fp,"%d\n", c[i].pin);
+}
+    fclose(fp);
+    return 0;
+}
+Number of Accounts 5
+Account Number:pbb7289375
+Balance:73575
+Enter the pin:8789
+Account Number:pjb83586587
+Balance:8738
+Enter the pin:9839
+Account Number:jkgb838766
+Balance:9837
+Enter the pin:8763 
+Account Number:dbh37754797
+Balance:78271
+Enter the pin:9832
+Account Number:kdhf83697159
+Balance:9927
+Enter the pin:9233

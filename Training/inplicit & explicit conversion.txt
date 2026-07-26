@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+float k=3/2;       //implicit conversion
+printf("%f",k);
+return 0;
+}
+1.000000
+
+#include <stdio.h>
+int main() {
+float k=(float)3/2;   //explicit conversion
+printf("%f",k);
+return 0;
+}
+1.500000

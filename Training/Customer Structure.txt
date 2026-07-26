@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct customer{
+    char proname[100];
+    float rate;
+    int qty;
+};
+int main(){
+    int n,i;
+    printf("how many customers?: ");
+    scanf("%d",&n);
+    struct customer c[n];
+    for(i=0;i<n;i++){
+    printf("Product name:");
+    scanf("%s",&c[i].proname);
+    printf("Rate:");
+    scanf("%f",&c[i].rate);
+    printf("Quantity:");
+    scanf("%d",&c[i].qty);
+}
+for(i=0;i<n;i++){
+    if (c[i].rate*c[i].qty>5000){
+        printf("Customer %d Eligible for gift card\n",i+1);
+    }
+    else{
+        printf("Customer %d Not Eligible for gift card\n",i+1);
+    }
+}
+ return 0;
+}
+how many customers?: 3
+Product name:Bed
+Rate:8000
+Quantity:1
+Product name:Mirror
+Rate:950
+Quantity:6
+Product name:Frame
+Rate:200
+Quantity:4
+Customer 1 Eligible for gift card
+Customer 2 Eligible for gift card
+Customer 3 Not Eligible for gift card

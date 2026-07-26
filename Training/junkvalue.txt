@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+int sum;
+int i=0;
+int x=10;
+while(i<=5 ){
+    sum+=x;
+    i++;
+}
+printf("%d",sum);
+return 0;
+}
+31534
+as sum is having junk value
+
+#include <stdio.h>
+int main() {
+int sum=0;
+int i=0;
+int x=10;
+while(i<=5 ){
+    sum+=x;
+    i++;
+}
+printf("%d",sum);
+return 0;
+}
+60

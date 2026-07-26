@@ -1,0 +1,85 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct student{
+    int age;
+    float height;
+    char name[100];
+};
+int main(){
+    struct student s1;
+    s1.age=17;
+    s1.height=157.9;
+    s1.name="Priya";
+    struct student s2;
+    s2.age=20;
+    s2.height=178.09;
+    printf("%s",s1.name);
+    return 0;
+}
+app.c: In function 'main':
+app.c:13:12: error: assignment to expression with array type
+     s1.name="Priya";
+            ^
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct student{
+    int age;
+    float height;
+    char name[100];
+};
+int main(){
+    struct student s1;
+    s1.age=17;
+    s1.height=157.9;
+    strcpy(s1.name,"Priya");
+    struct student s2;
+    s2.age=20;
+    s2.height=178.09;
+    printf("%s",s1.name);
+    return 0;
+}
+Priya
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct student{
+    int age;
+    float height;
+    char name[100];
+};
+int main(){
+    struct student s1={23,160.9,"priya"};
+    struct student s2;
+    s2.age=20;
+    s2.height=178.09;
+    printf("%s",s1.name);
+    return 0;
+}
+Priya
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct student{
+    int age;
+    float height;
+    char name[100];
+};
+int main(){
+    struct student s[3];
+    s[0].age=19;
+    s[0].height=169.5;
+    strcpy(s[0].name,"Priya");
+    s[1].age=17;
+    s[1].height=157.9;
+    strcpy(s[1].name,"Mahi");
+    s[2].age=20;
+    s[2].height=178.09;
+    printf("age:%d height:%f  name:%s",s[0].age,s[0].height,s[0].name);
+    return 0;
+}
+age:19 height:169.500000  name:Priya

@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+class Employee{
+    public:
+    string empname;
+    int ID;
+    int Salary;
+    void display(){
+        cout<<"The Employee name is: "<<empname<<endl;
+        cout<<"The Employee ID is: "<<ID<<endl;
+        cout<<"The Employee Salary is: "<<Salary<<endl;
+    }
+};
+int main(){
+    Employee e1;
+    e1.empname="Ram";
+    e1.ID=1;
+    e1.Salary=50000;
+    e1.display();
+}
+The Employee name is: Ram
+The Employee ID is: 1
+The Employee Salary is: 50000

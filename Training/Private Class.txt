@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+class student{
+    private://Access specifier
+    string name; //Global
+    public:
+    void display(){
+        cout<<"The name is "<<name<<endl;
+    }
+};
+int main(){
+    student s1;
+    s1.name="Michelle";
+    s1.display();
+}
+app.cpp: In function 'int main()':
+app.cpp:13:8: error: 'std::__cxx11::string student::name' is private within this context
+     s1.name="Michelle";
+        ^~~~
+app.cpp:5:12: note: declared private here
+     string name; //Global
+            ^~~~

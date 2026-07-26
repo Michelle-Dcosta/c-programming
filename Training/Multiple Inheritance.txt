@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class vehicle{
+    public:
+    int mileage;
+    void display1(){
+        cout<<"Mileage: "<<mileage<<endl;
+    }
+};
+class Car{
+public:
+string brand;
+void display2(){
+    cout<<"Brand: "<<brand<<endl;
+}
+};
+class bike : public vehicle,public Car{
+public:
+string color;
+void display3(){
+    cout<<"Color: "<<color<<endl;
+}
+};
+int main(){
+    bike b1;
+    b1.mileage=90;
+    b1.brand="Harley";
+    b1.color="black";
+    b1.display1();
+    b1.display2();
+    b1.display3();
+}
+Mileage: 90
+Brand: Harley
+Color: black

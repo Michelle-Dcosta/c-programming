@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main() {
+int n=88277;
+int unique_value=0;
+while (n>0){
+    int s=n%10;
+    unique_value^=s;
+    n=n/10;
+}
+printf("%d",unique_value);
+return 0;
+}
+2
+there should be only one unique number and even number of duplicate values
+
+#include <stdio.h>
+int main() {
+int n=888277;
+int unique_value=0;
+while (n>0){
+    int s=n%10;
+    unique_value^=s;
+    n=n/10;
+}
+printf("%d",unique_value);
+return 0;
+}
+10
+
+#include <stdio.h>
+int main() {
+int n=8888277;
+int unique_value=0;
+while (n>0){
+    int s=n%10;
+    unique_value^=s;
+    n=n/10;
+}
+printf("%d",unique_value);
+return 0;
+}
+2

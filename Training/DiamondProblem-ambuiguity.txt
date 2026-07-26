@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+class b{
+    public:
+    string name;
+};
+class D1: public b{
+    public :
+    int age;
+    void display(){
+        cout<<"The name is: "<<name<<" age is: "<<age<<endl;
+    }
+};
+class D2: public b{
+    public :
+    int sal;
+    void display1(){
+        cout<<"The name is: "<<name<<" salary is: "<<sal<<endl;
+    }
+};
+class sder: public D1,public D2{
+    public:
+    int ID;
+    void display2(){
+        cout<<"The Employee name is: "<<name<<" age is: "<<age<<" ID is: "<<ID<<" salary is: "<<sal<<endl;
+    }                //ambuiguity
+};
+int main(){
+    sder s1;
+    s1.name="Ram";
+    s1.age=21;
+    s1.sal=70000;
+    s1.ID=903;
+    s1.display();
+    s1.display1();
+    s1.display2();
+}
+app.cpp: In member function 'void sder::display2()':
+app.cpp:25:41: error: reference to 'name' is ambiguous
+         cout<<"The Employee name is: "<<name<<" age is: "<<age<<" ID is: "<<ID<<" salary is: "<<sal<<endl;
+                                         ^~~~
+app.cpp:5:12: note: candidates are: std::__cxx11::string b::name
+     string name;
+            ^~~~
+app.cpp:5:12: note:                 std::__cxx11::string b::name
+app.cpp: In function 'int main()':
+app.cpp:30:8: error: request for member 'name' is ambiguous
+     s1.name="Ram";
+        ^~~~
+app.cpp:5:12: note: candidates are: std::__cxx11::string b::name
+     string name;
+            ^~~~
+app.cpp:5:12: note:                 std::__cxx11::string b::name
